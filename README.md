@@ -20,9 +20,9 @@ En este repo podréis dejar vuestras soluciones a los ejercicios del temario.
 ```
 
 ### Ya tengo un ejercicio solucionado
-Estupendo, haz una rama nueva y lanza un Pull Reques a una compañera para una segunda validación. Recordad que quien valida NO ejecuta el merge, sino que avisa a la compañera que subió la rama para que con el OK dado ejecute ella.
+Estupendo, haz una rama nueva y lanza una Pull Request a una compañera para una segunda validación. Recordad que quien valida NO ejecuta el merge, sino que avisa a la compañera que subió la rama para que con el OK dado ejecute ella.
 
 ### Foh, yo tengo un ejercicio a medias pero no termina de ir
-Pues lo subimos a una rama y creamos unas issues de moda pidiendo ayuda a compañeras para echar a andar el ejercicio :)
+Pues lo subimos a una rama y creamo una issue de moda pidiendo ayuda a compañeras para echar a andar el ejercicio :)
 
 :)
