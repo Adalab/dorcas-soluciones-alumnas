@@ -10,4 +10,6 @@ var users = [
   {name: 'Gregory Goyle', time: 56}
   ];
 
-  const [first, second, third] = users;
+const [first] = users;
+const {name, time} = first;
+console.log(The winner is ${first.name} with ${first.time} seconds);
