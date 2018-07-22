@@ -8,4 +8,4 @@ const users = [
 ];
 
 const [winner1, winner2 ,winner3] = users;
-console.log(`The winner is ${winner1.name} with a time of ${winner1.time} , the second is ${winner2.name} with a time of ${winner2.time} , the third is ${winner3.name} with a time of ${winner3.time} `); // The z-index is 12
+console.log(`The winner is ${winner1.name} with a time of ${winner1.time} , the second is ${winner2.name} with a time of ${winner2.time} , the third is ${winner3.name} with a time of ${winner3.time} `); 
