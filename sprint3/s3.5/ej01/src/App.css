@@ -1,0 +1,53 @@
+.App {
+  width: 400px;
+  margin:20px auto;
+  padding: 30px 0px;
+  text-align: left;
+  background-color: #e9e9e9;
+}
+.App2{
+  background-color: white;
+  width: 350px;
+  margin: 0 auto;
+  padding: 10px;
+}
+.App-header {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+.App-logo {
+  height: 100px;
+  width: 100px;
+  margin: 20px 20px 0 20px;
+  border-radius: 50px;
+}
+.App-intro {
+  text-align: left;
+
+  margin-left: 20px;
+}
+.Footer_1 {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 20px;
+}
+.footer_2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.icon {
+  color: red;
+  margin:0px 5px;
+  font-size: 25px;
+}
+.footer_text{
+  color:#dcdcdc;
+}
+.Myday{
+  font-size: 14px;
+}
+.MyName{
+  margin: 25px 0 0 0;
+}
