@@ -1,0 +1,54 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 80px;
+}
+
+.App-header {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.App-main {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.App-titleandsub-container {
+  text-align: left;
+  margin-left: 50px;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-subtitle {
+  font-size: 1em;
+  color: grey;
+}
+
+.App-intro {
+  font-size: large;
+  text-align: left;
+  color: grey;
+}
+
+.App-foot {
+  display: flex;
+  justify-content: space-between;
+  color: grey;
+}
+
+.fa-heart {
+  margin-left: 15px;
+  color: red;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
