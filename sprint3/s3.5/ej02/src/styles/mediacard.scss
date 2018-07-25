@@ -1,0 +1,61 @@
+body {
+  background-color: lightgray;
+  font-family     : sans-serif;
+}
+
+.card__container {
+  background-color: white;
+  width           : 400px;
+  padding         : 20px;
+  margin          : 30px auto;
+  box-shadow      : 0 4px 8px 3px rgb(176, 176, 176);
+}
+
+.card__header {
+  display        : flex;
+  align-items    : center;
+  justify-content: flex-start;
+}
+
+.card__header--photo {
+  width : 15%;
+  margin: 10px;
+}
+
+.card__header--title {
+  font-size: 1.2rem;
+  margin   : 0;
+}
+
+.card__header--date {
+  font-size  : 0.9rem;
+  margin     : 0;
+  font-weight: normal;
+  font-style : italic;
+}
+
+.card__main--text {
+  text-align: justify;
+}
+
+.card__footer {
+  display        : flex;
+  align-items    : center;
+  justify-content: space-between;
+}
+
+.more {
+  margin-left: 15px;
+  font-size  : 0.9rem;
+  color      : gray;
+}
+
+.likes {
+  margin-right: 15px;
+  color       : gray;
+}
+
+.heart {
+  margin-left: 10px;
+  color      : crimson;
+}
