@@ -2,14 +2,14 @@
 
 Creado usando node-sass.
 
-Para visualziarlo correctamente, necesitarás instalar los paquetes Sass en tu local
+Para visualziarlo correctamente, creo que necesitarás instalar los paquetes Sass en tu local
 
 ```
 $ npm install --save node-sass-chokidar
-$ npm install --save npm-run-al
+$ npm install --save npm-run-all
 ```
 
-O cambiar los Scripts del package.json para su configuración inicial:
+O posiblemente cambiar los Scripts del package.json para su configuración inicial:
 
 ```
 "scripts": {
