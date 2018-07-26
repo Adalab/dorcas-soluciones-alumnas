@@ -1,10 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import PropTypes from 'prop-types';
 import './index.css';
+import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
-import ItemList from './ItemList';
-
-ReactDOM.render(<ItemList />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();
