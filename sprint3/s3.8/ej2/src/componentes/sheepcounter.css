@@ -1,0 +1,54 @@
+body {
+  background-image: url("http://www.clipartsfree.net/svg/42666-landscape-background-vector.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+a {
+  
+    position: relative;
+  color: #fff;
+  text-decoration: none;
+  background-color: #344960;
+  font-family: 'Helvetica';
+  font-weight: 700;
+  font-size: 3em;
+  display: block;
+  padding: 4px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  -webkit-box-shadow: 0px 9px 0px #12273d;
+  -moz-box-shadow:0px 9px 0px #12273d;
+  box-shadow: 0px 9px 0px #12273d;
+  margin: 50px auto;
+    width: 230px;
+    text-align: center;
+  
+  -webkit-transition: all .1s ease;
+  -moz-transition: all .1s ease;
+  -ms-transition: all .1s ease;
+  -o-transition: all .1s ease;
+  transition: all .1s ease;
+}
+
+a:active {
+  -webkit-box-shadow: 0px 3px 0px #12273d;
+  -moz-box-shadow: 0px 3px 0px #12273d;
+  box-shadow: 0px 3px 0px #12273d;
+  position: relative;
+  top: 6px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr ;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+.contador {
+  margin:0;
+}
+
+.margin {
+  margin-top: 200px;
+}
