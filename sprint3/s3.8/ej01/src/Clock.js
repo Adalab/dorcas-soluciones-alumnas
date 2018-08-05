@@ -4,6 +4,7 @@ class Clock extends React.Component {
     constructor(props){
         super(props);
         this.state = {
+            realClock:{},
             minutes:0,
             seconds:0,
         }
@@ -13,27 +14,33 @@ class Clock extends React.Component {
     }
     
     updateClock(){
-        if(this.state.seconds < 59){
-            console.log('deberia entrar aqui no?');
-            this.setState({
-                seconds : this.state.seconds + 1,
-            });
-        } else if (this.state.seconds === 59){
-            this.setState({
-                seconds : 0,
-                minutes : this.state.minutes + 1,
-            });
-        }
+        const realClock = new Date();
+        this.setState({
+            realClock: this.state.realClock,
+        });
+        // if(this.state.seconds < 59){
+        //     this.setState({
+        //         seconds : this.state.seconds + 1,
+        //     });
+        // } else if (this.state.seconds === 59){
+        //     this.setState({
+        //         seconds : 0,
+        //         minutes : this.state.minutes + 1,
+        //     });
+        // }
         console.log('this.state',this.state)
     }
 
-    newDate(){
-        const {minutes, seconds} = this.state;
-        return (`${minutes} : ${seconds}`);
-    }
+    
+    // {
+    //     const {minutes, seconds} = this.state;
+    //     return (`${minutes} : ${seconds}`);
+    // }
     
     render(){
-        return (<p>{this.newDate()}</p>);
+        
+        console.log(realClock);
+        return ('vaya..');
     }
 }
 
