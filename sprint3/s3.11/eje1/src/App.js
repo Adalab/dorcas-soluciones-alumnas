@@ -10,8 +10,8 @@ class App extends Component {
 
     this.state = {
       reasonsStore: [],
-      valueCity: null,
-      valueGender: null
+      tempData: [],
+      value: null
     }
     console.log(this.state)
     this.fetchNewReasons = this.fetchNewReasons.bind(this);
@@ -21,13 +21,14 @@ class App extends Component {
   }
 
   handleChangeCity(event){
-
+    
     const ciudad = event.target.value;
+    console.log(ciudad)
     let item = this.state.reasonsStore.filter(item => item.location.city === ciudad);
     console.log(item)
      this.setState({
-      reasonsStore: item,
-      value: ciudad
+      tempData: item,
+      value: ciudad,
     })
 
   }
@@ -38,37 +39,42 @@ class App extends Component {
       let item = this.state.reasonsStore.filter(item => item.gender === gender);
       console.log(item)
       this.setState({
-        reasonsStore: item,
-        value: gender
+        tempData: item,
+        value: gender,
+       
       })
 
   }
+
 
 
   fetchNewReasons() {
     fetch(ENDPOINT)
       .then((response) => response.json())
       .then((data) => {
-     
+        
         this.setState({
-          reasonsStore: data.results
+          reasonsStore: data.results,
+          tempData : data.results
         });
       });
   }
   render() {
 
     const { reasonsStore } = this.state;
-    console.log(reasonsStore.results)
+    console.log("aaaa",reasonsStore)
+    console.log(this.state.reasonsStore)
     
     return (
       <div className="App">
           <div className="location">
     
           </div>
-          <DatosPersonas  datos = {this.state.reasonsStore}
+          <DatosPersonas  datosSelect = {this.state.reasonsStore}
+           datosList = {this.state.tempData}
            changeCity={this.handleChangeCity} 
            changeGender={this.handleChangeGender} 
-           value = {this.state.value}
+          
           />
       </div>
     );
