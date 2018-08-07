@@ -1,0 +1,271 @@
+// COLOR VARIABLES
+$c_01: #c6c8cf; // Purple Gray
+$c_02: #383A3F; // Black
+$c_03: #fec9c9; // Pink
+$c_04: #fff; // White
+$c_05: #CE6D39; // Brown
+$c_06: #808080; // Dark Gray
+$c_07: #d05165; // Red
+$c_08: #cc9634; // Moorit
+
+// SIZE VARIABLES
+$body: 200px; // Resize sheep by editing only this variable
+$body_radius: round($body / 2);
+$hair: round($body / 4);
+$half_hair: round($hair / 2);
+$face_w: round($hair * 2);
+$face_h: round($hair * 1.5);
+$eye: round($half_hair / 2);
+$ear_h: round($hair / 2.5);
+$ear_w: round($ear_h * 1.5);
+$leg: round($half_hair / 1.5);
+
+// ANIMATION VARIABLES
+$sheeps: 6;
+
+// MIXINS
+@mixin size($w, $h: $w) {
+  width: $w;
+  height: $h;
+}
+
+@mixin center_hztl($ml) {
+  margin-left: $ml;
+  position: absolute;
+  left: 50%;
+}
+
+// PLACEHOLDERS
+%switch_sheep {
+  animation-name: switch_sheep;
+  animation-duration: round(2.5s * $sheeps);
+  animation-timing-function: steps(1);
+  animation-iteration-count: infinite;
+  background-color: $c_02; // Default color
+}
+
+%leg {
+  @include size($leg, $half_hair); 
+  background-color: $c_03;
+}
+
+// LAYOUT
+body {
+  min-height: 320px;
+  background-color: $c_01;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+// PATTERNS
+.p {
+  &-circle {
+    border-radius: 50%;
+    box-sizing: border-box;
+  }
+  
+  &-flex {
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+}
+
+// ILLUSTRATION
+.sheep {
+  @include size($body);
+  cursor: pointer;
+  margin: 27vh auto 0;
+  position: relative;
+  
+  &:hover {
+    .sheep {
+      &__body,
+      &__hair,
+      &__bang {
+        animation-play-state: paused; 
+      }
+    }
+  }
+  
+  &__body {
+    @include size($body);
+    @extend %switch_sheep;
+  }
+  
+  &__hair {
+    @include size($hair);
+    @include center_hztl(-$half_hair);
+    @extend %switch_sheep;
+    margin-top: -$half_hair;
+    top: 50%;
+    
+    &--01 {
+      transform: translateY(-$body_radius);
+    }
+    
+    &--02 {
+      transform: rotate(22.5deg) translateY(-$body_radius);
+    }
+    
+    &--03 {
+      transform: rotate(45deg) translateY(-$body_radius);
+    }
+    
+    &--04 {
+      transform: rotate(-22.5deg) translateX($body_radius);
+    }
+    
+    &--05 {
+      transform: translateX($body_radius);
+    }
+    
+    &--06 {
+      transform: rotate(22.5deg) translateX($body_radius);
+    }
+    
+    &--07 {
+      transform: rotate(-45deg) translateY($body_radius);
+    }
+    
+    &--08 {
+      transform: rotate(-22.5deg) translateY($body_radius);
+    }
+    
+    &--09 {
+      transform: translateY($body_radius);
+    }
+    
+    &--10 {
+      transform: rotate(22.5deg) translateY($body_radius);
+    }
+    
+    &--11 {
+      transform: rotate(45deg) translateY($body_radius);
+    }
+    
+    &--12 {
+      transform: rotate(-22.5deg) translateX(-$body_radius);
+    }
+    
+    &--13 {
+      transform: translateX(-$body_radius);
+    }
+    
+    &--14 {
+      transform: rotate(22.5deg) translateX(-$body_radius);
+    }
+    
+    &--15 {
+      transform: rotate(-45deg) translateY(-$body_radius);
+    }
+    
+    &--16 {
+      transform: rotate(-22.5deg) translateY(-$body_radius);
+    }
+  }
+  
+  &__legs {
+    z-index: -1;
+  }
+  
+  &__leg {
+    @extend %leg;
+    border-radius: 0 0 50% 50%;
+    margin-top: $half_hair;
+    
+    &:before {
+      @extend %leg;
+      content: '';
+      position: absolute;
+      top: 0;
+    }
+    
+    &:first-child {
+      margin-right: $hair;
+    }
+  }
+  
+  &__face {
+    @include size($face_w, $face_h);
+    @include center_hztl(-(round($face_w / 2)));
+    background-color: $c_03;
+    top: $hair;
+  }
+  
+  &__bangs {
+    margin-top: -$half_hair;
+    z-index: 60;
+  }
+  
+  &__bang {
+    @include size($hair);
+    @extend %switch_sheep;
+  }
+  
+  &__eyes {
+    margin-top: round($eye / 2);
+    z-index: 30;
+  }
+  
+  &__eye {
+    @include size($eye);
+    background-color: $c_02;
+
+    &:first-child {
+      margin-right: $hair;
+    }
+  }
+  
+  &__nose {
+    @include size(round($eye * 1.5), $eye);
+    background-color: $c_02;   
+    margin: 0 auto;
+  }
+  
+  &__ear {
+    @include size($ear_w, $ear_h);
+    background-color: $c_03;  
+    position: absolute;
+    top: round($ear_h - ($eye / 2));
+    z-index: 0;
+    
+    &--left {
+      left: -(round($ear_w / 2));
+    }
+    
+    &--right {
+      right: -(round($ear_w / 2));
+    }
+  }
+}
+
+// ANIMATIONS
+@keyframes switch_sheep {
+  0% {
+    background-color: $c_02;
+  }
+  16.6666667% {
+    background-color: $c_04;
+  }
+  33.3333333% {
+    background-color: $c_05;
+  }
+  50% {
+    background-color: $c_06;
+  }
+  66.6666667% {
+    background-color: $c_07;
+  }
+  83.3333333% {
+    background-color: $c_08;
+  }
+}
