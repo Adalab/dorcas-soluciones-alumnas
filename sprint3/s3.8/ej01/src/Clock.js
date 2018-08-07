@@ -4,43 +4,30 @@ class Clock extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            realClock:{},
-            minutes:0,
-            seconds:0,
-        }
+            date: new Date()
+        };
+
         this.updateClock = this.updateClock.bind(this)
         setInterval(this.updateClock, 1000);
-        console.log('this.state',this);
+        // console.log('this.state',this);
     }
     
     updateClock(){
-        const realClock = new Date();
+
         this.setState({
-            realClock: this.state.realClock,
+            date: new Date()
         });
-        // if(this.state.seconds < 59){
-        //     this.setState({
-        //         seconds : this.state.seconds + 1,
-        //     });
-        // } else if (this.state.seconds === 59){
-        //     this.setState({
-        //         seconds : 0,
-        //         minutes : this.state.minutes + 1,
-        //     });
-        // }
-        console.log('this.state',this.state)
+        console.log('this.state',this.state.date)
+        console.log('this.state.date.toDateString()',this.state.date.toDateString())
     }
 
-    
-    // {
-    //     const {minutes, seconds} = this.state;
-    //     return (`${minutes} : ${seconds}`);
-    // }
-    
     render(){
-        
-        console.log(realClock);
-        return ('vaya..');
+        return (
+            <div>
+                <p>{`Hora local: ${this.state.date.toLocaleTimeString()}`}</p>
+                <p>{`Fecha: ${this.state.date.toDateString()}`}</p>
+            </div>
+        );
     }
 }
 
