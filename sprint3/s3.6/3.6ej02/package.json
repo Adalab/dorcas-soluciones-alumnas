@@ -1,10 +1,11 @@
 {
-  "name": "3.6_componentes_en_react",
+  "name": "new-ej",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1",
+    "font-awesome": "^4.7.0",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
     "react-scripts": "1.1.4"
   },
   "scripts": {
