@@ -1,0 +1,17 @@
+.lista{
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.lista li{
+    padding: 19px 40px;
+    width: 140px;
+    border: 1px solid;
+}
+
+.name{
+    width: 120px;
+}
