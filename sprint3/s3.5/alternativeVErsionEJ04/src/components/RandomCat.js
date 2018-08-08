@@ -14,14 +14,11 @@ class RandomCat extends React.Component {
         <img src={ `http://lorempixel.com/${200}/${400}/cats/${randomCat}` } alt="Random cat" />
       </a>
       :
-        
           <a href="http://lorempixel.com">
           <img src={ `http://lorempixel.com/${heightCat}/${widthCat}/cats/${randomCat}`} alt="Random cat" />
         </a>
       
-    );}
-   
-    
+    );} 
   }
 
 
